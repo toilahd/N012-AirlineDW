@@ -1,1 +1,11 @@
+# Visual Studio & ETL build outputs
 .vs/
+etl/bin/
+etl/obj/
+*.ispac
+
+# Other build files
+bin/
+obj/
+*.log
+*.tmp
