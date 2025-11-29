@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ADMIN-PC"
   DTS:CreatorName="ADMIN-PC\Admin"
-  DTS:DTSID="{1D9DC406-1115-4B1D-8158-1D4CEF53D47C}"
+  DTS:DTSID="{5E249D7A-BB93-4A9A-BF59-3D82A23854F5}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="17.0.1008.3"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="SourcetoStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="74"
-  DTS:VersionGUID="{F1241EEC-0C22-4801-A5AF-E59E6731662D}">
+  DTS:VersionBuild="78"
+  DTS:VersionGUID="{B661D185-32A6-494B-9FDC-8CBDF5B653BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -28,6 +28,20 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=ADMIN-PC;Initial Catalog=metadata_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-etl-{E02DB414-EDCB-4E89-96BE-9B08363B5D77}ADMIN-PC.metadata_airlines;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ADMIN-PC.nds_airlines]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{40231E09-2A7E-4606-8DEB-57DD9F8EC838}"
+      DTS:ObjectName="ADMIN-PC.nds_airlines">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::nds_connectionstring]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ADMIN-PC;Initial Catalog=stage_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-etl-{0B7F5142-8B7D-4089-8B5C-7A5B7599407D}ADMIN-PC.nds_airlines;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -137,7 +151,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -273,7 +287,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -429,7 +443,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -685,7 +699,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1199,7 +1213,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1902,7 +1916,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -2605,7 +2619,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3308,7 +3322,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3761,7 +3775,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4214,7 +4228,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4796,37 +4810,37 @@
         <NodeLayout
           Size="249.6,41.6"
           Id="Package\Extract Airlports Data from Souce to Stage"
-          TopLeft="400.833311432766,327.799998427033" />
+          TopLeft="419.16664376441,319.133331820633" />
         <NodeLayout
           Size="269.6,41.6"
           Id="Package\Extract Flights Data from Source to Stage"
-          TopLeft="678.666642261878,327.799998427034" />
-        <NodeLayout
-          Size="122.4,41.6"
-          Id="Package\SET CET"
-          TopLeft="478.333307198354,6.93333328511972" />
+          TopLeft="724.433307608136,313.066665196154" />
         <NodeLayout
           Size="184,41.6"
           Id="Package\Get CET, LSET Flights"
           TopLeft="449.166642125283,172.866666877601" />
         <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\SET CET"
+          TopLeft="478.333307198354,6.93333328511972" />
+        <NodeLayout
           Size="230.4,41.6"
           Id="Package\TRUNCATE ALL STAGE TABLE"
-          TopLeft="427.499976642431,104.866665937437" />
+          TopLeft="428.425902517767,90.4222215934374" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="541.116641920392,48.5333332851197">
+          TopLeft="541.57960485806,48.5333332851197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56.3333326523172"
+              EndConnector="0,41.8888883083177"
               Start="0,0"
-              End="0,48.8333326523172">
+              End="0,34.3888883083177">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.8333326523172" />
+                    End="0,34.3888883083177" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4837,18 +4851,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="541.933309383857,146.466665937437">
+          TopLeft="542.396272321525,132.022221593437">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.4000009401641"
+              EndConnector="0,40.8444452841636"
               Start="0,0"
-              End="0,18.9000009401641">
+              End="0,33.3444452841636">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.9000009401641" />
+                    End="0,33.3444452841636" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4893,30 +4907,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="541.166642125283,214.466666877601">
+          TopLeft="542.566642944847,214.466666877601">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.5333306925165,113.333331549432"
+              EndConnector="0,104.666664943032"
               Start="0,0"
-              End="-15.5333306925165,105.833331549432">
+              End="0,97.1666649430323">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.6666657747159" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,52.6666657747159"
-                    Point2="0,56.6666657747159"
-                    Point3="-4,56.6666657747159" />
-                  <mssgle:LineSegment
-                    End="-11.5333306925165,56.6666657747159" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-11.5333306925165,56.6666657747159"
-                    Point2="-15.5333306925165,56.6666657747159"
-                    Point3="-15.5333306925165,60.6666657747159" />
-                  <mssgle:LineSegment
-                    End="-15.5333306925165,105.833331549432" />
+                    End="0,97.1666649430323" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4931,26 +4933,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="228.300000136595,113.333331549433"
+              EndConnector="274.066665482853,98.5999983185534"
               Start="0,0"
-              End="228.300000136595,105.833331549433">
+              End="274.066665482853,91.0999983185534">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.8571422455197" />
+                    End="0,29.8057137092183" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.8571422455197"
-                    Point2="0,38.8571422455197"
-                    Point3="4,38.8571422455197" />
+                    Point1="0,29.8057137092183"
+                    Point2="0,33.8057137092183"
+                    Point3="4,33.8057137092183" />
                   <mssgle:LineSegment
-                    End="224.300000136595,38.8571422455197" />
+                    End="270.066665482853,33.8057137092183" />
                   <mssgle:CubicBezierSegment
-                    Point1="224.300000136595,38.8571422455197"
-                    Point2="228.300000136595,38.8571422455197"
-                    Point3="228.300000136595,42.8571422455197" />
+                    Point1="270.066665482853,33.8057137092183"
+                    Point2="274.066665482853,33.8057137092183"
+                    Point3="274.066665482853,37.8057137092183" />
                   <mssgle:LineSegment
-                    End="228.300000136595,105.833331549433" />
+                    End="274.066665482853,91.0999983185534" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5000,6 +5002,19 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Airlines Data from Souce to Stage\Airline source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Airlines Data from Souce to Stage\Airline stage">
     <Properties>
@@ -5051,6 +5066,32 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Airlports Data from Souce to Stage\Airports source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Airlports Data from Souce to Stage\Airrports stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract Flights Data from Source to Stage">
     <LayoutInfo>
@@ -5234,59 +5275,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Airlines Data from Souce to Stage\Airline source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Airlports Data from Souce to Stage\Airports source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Airlports Data from Souce to Stage\Airrports stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Flights Data from Source to Stage\Source flight_1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Flights Data from Source to Stage\Source flight_2">
+    design-time-name="Package\Extract Flights Data from Source to Stage\Stage flight_1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5312,7 +5301,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Flights Data from Source to Stage\Stage flight_1">
+    design-time-name="Package\Extract Flights Data from Source to Stage\Source flight_2">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5326,6 +5315,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Flights Data from Source to Stage\Stage flight_2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Flights Data from Source to Stage\Source flight_1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
