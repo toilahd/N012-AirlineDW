@@ -24,16 +24,16 @@ GO
 
 -- CREATE TABLE stg_airlines.airlines
 CREATE TABLE [dbo].[airlines_stg] (
-    IATA_CODE VARCHAR(10) PRIMARY KEY,
-    Airline VARCHAR(255)
+    IATA_CODE CHAR(2) PRIMARY KEY,
+    Airline NVARCHAR(255)
 );
 
 -- =============================
 -- 4. CREATE TABLE: airport
 -- =============================
 CREATE TABLE [dbo].[airports_stg] (
-    IATA_CODE VARCHAR(10) PRIMARY KEY,
-    AIRPORT VARCHAR(255),
+    IATA_CODE CHAR(10) PRIMARY KEY,
+    AIRPORT NVARCHAR(255),
     CITY VARCHAR(100),
     STATE VARCHAR(50),
     COUNTRY VARCHAR(100),

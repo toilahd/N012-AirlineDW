@@ -31,16 +31,16 @@ DROP TABLE IF EXISTS flights_3;
 -- 3. CREATE TABLE: airlines
 -- =============================
 CREATE TABLE airlines (
-    IATA_CODE VARCHAR(10) PRIMARY KEY,
-    Airline VARCHAR(255)
+    IATA_CODE CHAR(2) PRIMARY KEY,
+    Airline NVARCHAR(255)
 );
 
 -- =============================
 -- 4. CREATE TABLE: airport
 -- =============================
 CREATE TABLE airport (
-    IATA_CODE VARCHAR(10) PRIMARY KEY,
-    AIRPORT VARCHAR(255),
+    IATA_CODE CHAR(10) PRIMARY KEY,
+    AIRPORT NVARCHAR(255),
     CITY VARCHAR(100),
     STATE VARCHAR(50),
     COUNTRY VARCHAR(100),
@@ -54,7 +54,7 @@ CREATE TABLE airport (
 -- =============================
 CREATE TABLE flights_1 (
     DATE DATE,
-    AIRLINE VARCHAR(10),
+    AIRLINE CHAR(2),
     FLIGHT_NUMBER INT,
     TAIL_NUMBER VARCHAR(20),
     ORIGIN_AIRPORT CHAR(10),

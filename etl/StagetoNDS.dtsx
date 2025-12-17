@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{6F59FC96-40BD-4E96-A94F-742EDF94A900}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{3F8B08F4-874B-4F74-B487-52789E40526F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -281,14 +281,13 @@
                       refId="Package\Airlines Stage to NDS\insert new airline.Inputs[OLE DB Command Input].Columns[IATA_CODE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="10"
+                      cachedLength="2"
                       cachedName="IATA_CODE"
                       externalMetadataColumnId="Package\Airlines Stage to NDS\insert new airline.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].Columns[IATA_CODE]" />
                     <inputColumn
                       refId="Package\Airlines Stage to NDS\insert new airline.Inputs[OLE DB Command Input].Columns[Airline]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Airline"
                       externalMetadataColumnId="Package\Airlines Stage to NDS\insert new airline.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
@@ -318,7 +317,7 @@
                       refId="Package\Airlines Stage to NDS\insert new airline.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="2"
                       name="Param_0">
                       <properties>
                         <property
@@ -329,8 +328,7 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Airlines Stage to NDS\insert new airline.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       name="Param_1">
                       <properties>
@@ -478,14 +476,13 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].ExternalColumns[IATA_CODE]"
-                      length="10"
+                      length="2"
                       lineageId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].Columns[IATA_CODE]"
                       name="IATA_CODE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].Columns[Airline]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].ExternalColumns[Airline]"
@@ -500,12 +497,11 @@
                       refId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].ExternalColumns[IATA_CODE]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="2"
                       name="IATA_CODE" />
                     <externalMetadataColumn
                       refId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].ExternalColumns[Airline]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       name="Airline" />
                   </externalMetadataColumns>
@@ -519,13 +515,12 @@
                       refId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Error Output].Columns[IATA_CODE]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="2"
                       lineageId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Error Output].Columns[IATA_CODE]"
                       name="IATA_CODE" />
                     <outputColumn
                       refId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Error Output].Columns[Airline]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       lineageId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Error Output].Columns[Airline]"
                       name="Airline" />
@@ -630,7 +625,7 @@ where [refTable].[airline_code] = ?</property>
                       refId="Package\Airlines Stage to NDS\look up the airline IATA_CODE in airline stage.Inputs[Lookup Input].Columns[IATA_CODE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="10"
+                      cachedLength="2"
                       cachedName="IATA_CODE"
                       lineageId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].Columns[IATA_CODE]">
                       <properties>
@@ -757,8 +752,7 @@ WHERE [airline_code] = ?</property>
                       lineageId="Package\Airlines Stage to NDS\updated_date.Outputs[Derived Column Output].Columns[updated_date]" />
                     <inputColumn
                       refId="Package\Airlines Stage to NDS\update airline.Inputs[OLE DB Command Input].Columns[Airline]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Airline"
                       externalMetadataColumnId="Package\Airlines Stage to NDS\update airline.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
@@ -767,7 +761,7 @@ WHERE [airline_code] = ?</property>
                       refId="Package\Airlines Stage to NDS\update airline.Inputs[OLE DB Command Input].Columns[IATA_CODE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="10"
+                      cachedLength="2"
                       cachedName="IATA_CODE"
                       externalMetadataColumnId="Package\Airlines Stage to NDS\update airline.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Airlines Stage to NDS\Load airlines stage.Outputs[OLE DB Source Output].Columns[IATA_CODE]" />
@@ -776,8 +770,7 @@ WHERE [airline_code] = ?</property>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Airlines Stage to NDS\update airline.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       name="Param_0">
                       <properties>
@@ -803,7 +796,7 @@ WHERE [airline_code] = ?</property>
                       refId="Package\Airlines Stage to NDS\update airline.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       codePage="1252"
                       dataType="str"
-                      length="10"
+                      length="2"
                       name="Param_2">
                       <properties>
                         <property
@@ -1212,8 +1205,7 @@ WHERE [airline_code] = ?</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Airports Stage to NDS\Load Airports stage.Outputs[OLE DB Source Output].Columns[AIRPORT]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Airports Stage to NDS\Load Airports stage.Outputs[OLE DB Source Output].ExternalColumns[AIRPORT]"
@@ -1287,8 +1279,7 @@ WHERE [airline_code] = ?</property>
                       name="IATA_CODE" />
                     <externalMetadataColumn
                       refId="Package\Airports Stage to NDS\Load Airports stage.Outputs[OLE DB Source Output].ExternalColumns[AIRPORT]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       name="AIRPORT" />
                     <externalMetadataColumn
@@ -1337,8 +1328,7 @@ WHERE [airline_code] = ?</property>
                       name="IATA_CODE" />
                     <outputColumn
                       refId="Package\Airports Stage to NDS\Load Airports stage.Outputs[OLE DB Source Error Output].Columns[AIRPORT]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       lineageId="Package\Airports Stage to NDS\Load Airports stage.Outputs[OLE DB Source Error Output].Columns[AIRPORT]"
                       name="AIRPORT" />
@@ -1616,8 +1606,7 @@ where [refTable].[airport_code] = ?</property>
                       lineageId="Package\Airports Stage to NDS\Load Airports stage.Outputs[OLE DB Source Output].Columns[IATA_CODE]" />
                     <inputColumn
                       refId="Package\Airports Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[AIRPORT]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="AIRPORT"
                       externalMetadataColumnId="Package\Airports Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
@@ -1698,8 +1687,7 @@ where [refTable].[airport_code] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Airports Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       name="Param_1">
                       <properties>
@@ -1895,8 +1883,7 @@ WHERE [airport_code] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Airports Stage to NDS\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[AIRPORT]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="AIRPORT"
                       externalMetadataColumnId="Package\Airports Stage to NDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
@@ -1960,8 +1947,7 @@ WHERE [airport_code] = ?</property>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Airports Stage to NDS\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="255"
                       name="Param_0">
                       <properties>
@@ -2534,6 +2520,233 @@ WHERE [airport_code] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Flights Stage to NDS\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input].Columns[SCHEDULED_DEPARTURE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="SCHEDULED_DEPARTURE"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input].Columns[DEPARTURE_TIME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DEPARTURE_TIME"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input].Columns[WHEELS_OFF]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WHEELS_OFF"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input].Columns[WHEELS_ON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WHEELS_ON"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input].Columns[SCHEDULED_ARRIVAL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="SCHEDULED_ARRIVAL"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input].Columns[ARRIVAL_TIME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ARRIVAL_TIME"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledDeparture]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledDeparture]"
+                      name="ScheduledDeparture"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]}) || [TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]}) == "") ? NULL(DT_DBTIME) : ((DT_I4)[REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]}),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)([SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]}),".0",""),4),1,2) + ":" + [SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]}),".0",""),4),3,2) + ":00"))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_DEPARTURE) || TRIM(SCHEDULED_DEPARTURE) == "") ? NULL(DT_DBTIME) : ((DT_I4)REPLACE(TRIM(SCHEDULED_DEPARTURE),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)(SUBSTRING(RIGHT("0000" + REPLACE(TRIM(SCHEDULED_DEPARTURE),".0",""),4),1,2) + ":" + SUBSTRING(RIGHT("0000" + REPLACE(TRIM(SCHEDULED_DEPARTURE),".0",""),4),3,2) + ":00"))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[DepartureTime]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[DepartureTime]"
+                      name="DepartureTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]}) || [TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]}) == "") ? NULL(DT_DBTIME) : ((DT_I4)[REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]}),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)([SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]}),".0",""),4),1,2) + ":" + [SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]}),".0",""),4),3,2) + ":00"))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL(DEPARTURE_TIME) || TRIM(DEPARTURE_TIME) == "") ? NULL(DT_DBTIME) : ((DT_I4)REPLACE(TRIM(DEPARTURE_TIME),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)(SUBSTRING(RIGHT("0000" + REPLACE(TRIM(DEPARTURE_TIME),".0",""),4),1,2) + ":" + SUBSTRING(RIGHT("0000" + REPLACE(TRIM(DEPARTURE_TIME),".0",""),4),3,2) + ":00"))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledArrival]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledArrival]"
+                      name="ScheduledArrival"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]}) || [TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]}) == "") ? NULL(DT_DBTIME) : ((DT_I4)[REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]}),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)([SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]}),".0",""),4),1,2) + ":" + [SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]}),".0",""),4),3,2) + ":00"))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL(SCHEDULED_ARRIVAL) || TRIM(SCHEDULED_ARRIVAL) == "") ? NULL(DT_DBTIME) : ((DT_I4)REPLACE(TRIM(SCHEDULED_ARRIVAL),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)(SUBSTRING(RIGHT("0000" + REPLACE(TRIM(SCHEDULED_ARRIVAL),".0",""),4),1,2) + ":" + SUBSTRING(RIGHT("0000" + REPLACE(TRIM(SCHEDULED_ARRIVAL),".0",""),4),3,2) + ":00"))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ArrivalTime]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ArrivalTime]"
+                      name="ArrivalTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]}) || [TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]}) == "") ? NULL(DT_DBTIME) : ((DT_I4)[REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]}),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)([SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]}),".0",""),4),1,2) + ":" + [SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]}),".0",""),4),3,2) + ":00"))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL(ARRIVAL_TIME) || TRIM(ARRIVAL_TIME) == "") ? NULL(DT_DBTIME) : ((DT_I4)REPLACE(TRIM(ARRIVAL_TIME),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)(SUBSTRING(RIGHT("0000" + REPLACE(TRIM(ARRIVAL_TIME),".0",""),4),1,2) + ":" + SUBSTRING(RIGHT("0000" + REPLACE(TRIM(ARRIVAL_TIME),".0",""),4),3,2) + ":00"))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOff]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOff]"
+                      name="WheelsOff"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]}) || [TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]}) == "") ? NULL(DT_DBTIME) : ((DT_I4)[REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]}),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)([SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]}),".0",""),4),1,2) + ":" + [SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]}),".0",""),4),3,2) + ":00"))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL(WHEELS_OFF) || TRIM(WHEELS_OFF) == "") ? NULL(DT_DBTIME) : ((DT_I4)REPLACE(TRIM(WHEELS_OFF),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)(SUBSTRING(RIGHT("0000" + REPLACE(TRIM(WHEELS_OFF),".0",""),4),1,2) + ":" + SUBSTRING(RIGHT("0000" + REPLACE(TRIM(WHEELS_OFF),".0",""),4),3,2) + ":00"))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOn]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOn]"
+                      name="WheelsOn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]}) || [TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]}) == "") ? NULL(DT_DBTIME) : ((DT_I4)[REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]}),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)([SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]}),".0",""),4),1,2) + ":" + [SUBSTRING]([RIGHT]("0000" + [REPLACE]([TRIM](#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]}),".0",""),4),3,2) + ":00"))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL(WHEELS_ON) || TRIM(WHEELS_ON) == "") ? NULL(DT_DBTIME) : ((DT_I4)REPLACE(TRIM(WHEELS_ON),".0","") == 2400 ? (DT_DBTIME)"00:00:00" : (DT_DBTIME)(SUBSTRING(RIGHT("0000" + REPLACE(TRIM(WHEELS_ON),".0",""),4),1,2) + ":" + SUBSTRING(RIGHT("0000" + REPLACE(TRIM(WHEELS_ON),".0",""),4),3,2) + ":00"))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Flights Stage to NDS\insert new flight to NDS"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -2608,22 +2821,6 @@ WHERE [flight_id] = ?</property>
                       externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER]" />
                     <inputColumn
-                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[SCHEDULED_DEPARTURE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="SCHEDULED_DEPARTURE"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[DEPARTURE_TIME]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="DEPARTURE_TIME"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]" />
-                    <inputColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[DEPARTURE_DELAY]"
                       cachedDataType="r8"
                       cachedName="DEPARTURE_DELAY"
@@ -2635,14 +2832,6 @@ WHERE [flight_id] = ?</property>
                       cachedName="TAXI_OUT"
                       externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[TAXI_OUT]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[WHEELS_OFF]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="WHEELS_OFF"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]" />
                     <inputColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[SCHEDULED_TIME]"
                       cachedDataType="r8"
@@ -2668,35 +2857,11 @@ WHERE [flight_id] = ?</property>
                       externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[AIR_TIME]" />
                     <inputColumn
-                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[WHEELS_ON]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="WHEELS_ON"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]" />
-                    <inputColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[TAXI_IN]"
                       cachedDataType="r8"
                       cachedName="TAXI_IN"
                       externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[TAXI_IN]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[SCHEDULED_ARRIVAL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="SCHEDULED_ARRIVAL"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[ARRIVAL_TIME]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="ARRIVAL_TIME"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]" />
                     <inputColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[ARRIVAL_DELAY]"
                       cachedDataType="r8"
@@ -2765,6 +2930,42 @@ WHERE [flight_id] = ?</property>
                       cachedName="flight_id"
                       externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_24]"
                       lineageId="Package\Flights Stage to NDS\Lookup flight.Outputs[Lookup Match Output].Columns[flight_id]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[ScheduledDeparture]"
+                      cachedDataType="dbTime"
+                      cachedName="ScheduledDeparture"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledDeparture]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[DepartureTime]"
+                      cachedDataType="dbTime"
+                      cachedName="DepartureTime"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[DepartureTime]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[WheelsOff]"
+                      cachedDataType="dbTime"
+                      cachedName="WheelsOff"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOff]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[WheelsOn]"
+                      cachedDataType="dbTime"
+                      cachedName="WheelsOn"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOn]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[ScheduledArrival]"
+                      cachedDataType="dbTime"
+                      cachedName="ScheduledArrival"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledArrival]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].Columns[ArrivalTime]"
+                      cachedDataType="dbTime"
+                      cachedName="ArrivalTime"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ArrivalTime]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2783,9 +2984,7 @@ WHERE [flight_id] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
@@ -2796,9 +2995,7 @@ WHERE [flight_id] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="Param_2">
                       <properties>
                         <property
@@ -2831,9 +3028,7 @@ WHERE [flight_id] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="Param_5">
                       <properties>
                         <property
@@ -2888,9 +3083,7 @@ WHERE [flight_id] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="Param_10">
                       <properties>
                         <property
@@ -2912,9 +3105,7 @@ WHERE [flight_id] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="Param_12">
                       <properties>
                         <property
@@ -2925,9 +3116,7 @@ WHERE [flight_id] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\insert new flight to NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="Param_13">
                       <properties>
                         <property
@@ -5291,22 +5480,6 @@ WHERE [flight_id] = ?</property>
                       externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[tail_number]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER]" />
                     <inputColumn
-                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[SCHEDULED_DEPARTURE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="SCHEDULED_DEPARTURE"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_departure]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_DEPARTURE]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[DEPARTURE_TIME]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="DEPARTURE_TIME"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[departure_time]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DEPARTURE_TIME]" />
-                    <inputColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[DEPARTURE_DELAY]"
                       cachedDataType="r8"
                       cachedName="DEPARTURE_DELAY"
@@ -5318,14 +5491,6 @@ WHERE [flight_id] = ?</property>
                       cachedName="TAXI_OUT"
                       externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[taxi_out]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[TAXI_OUT]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[WHEELS_OFF]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="WHEELS_OFF"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[wheels_off]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_OFF]" />
                     <inputColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[SCHEDULED_TIME]"
                       cachedDataType="r8"
@@ -5351,35 +5516,11 @@ WHERE [flight_id] = ?</property>
                       externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[distance]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DISTANCE]" />
                     <inputColumn
-                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[WHEELS_ON]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="WHEELS_ON"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[wheels_on]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[WHEELS_ON]" />
-                    <inputColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[TAXI_IN]"
                       cachedDataType="r8"
                       cachedName="TAXI_IN"
                       externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[taxi_in]"
                       lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[TAXI_IN]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[SCHEDULED_ARRIVAL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="SCHEDULED_ARRIVAL"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_arrival]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SCHEDULED_ARRIVAL]" />
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[ARRIVAL_TIME]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="ARRIVAL_TIME"
-                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[arrival_time]"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[ARRIVAL_TIME]" />
                     <inputColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[ARRIVAL_DELAY]"
                       cachedDataType="r8"
@@ -5472,6 +5613,49 @@ WHERE [flight_id] = ?</property>
                       cachedName="updated_date"
                       externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[updated_date]"
                       lineageId="Package\Flights Stage to NDS\created_date, updated_date.Outputs[Derived Column Output].Columns[updated_date]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[DATE]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="DATE"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[flight_date]"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DATE]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[ScheduledDeparture]"
+                      cachedDataType="dbTime"
+                      cachedName="ScheduledDeparture"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_departure]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledDeparture]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[ScheduledArrival]"
+                      cachedDataType="dbTime"
+                      cachedName="ScheduledArrival"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_arrival]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ScheduledArrival]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[DepartureTime]"
+                      cachedDataType="dbTime"
+                      cachedName="DepartureTime"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[departure_time]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[DepartureTime]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[ArrivalTime]"
+                      cachedDataType="dbTime"
+                      cachedName="ArrivalTime"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[arrival_time]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[ArrivalTime]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[WheelsOff]"
+                      cachedDataType="dbTime"
+                      cachedName="WheelsOff"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[wheels_off]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOff]" />
+                    <inputColumn
+                      refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].Columns[WheelsOn]"
+                      cachedDataType="dbTime"
+                      cachedName="WheelsOn"
+                      externalMetadataColumnId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[wheels_on]"
+                      lineageId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[WheelsOn]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5508,15 +5692,11 @@ WHERE [flight_id] = ?</property>
                       name="flight_date" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_departure]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="scheduled_departure" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_arrival]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="scheduled_arrival" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[scheduled_time]"
@@ -5524,27 +5704,19 @@ WHERE [flight_id] = ?</property>
                       name="scheduled_time" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[departure_time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="departure_time" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[arrival_time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="arrival_time" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[wheels_off]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="wheels_off" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[wheels_on]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
+                      dataType="dbTimeStamp"
                       name="wheels_on" />
                     <externalMetadataColumn
                       refId="Package\Flights Stage to NDS\load to NDS.Inputs[OLE DB Destination Input].ExternalColumns[elapsed_time]"
@@ -5702,7 +5874,7 @@ where [refTable].[airline_code] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="airline_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="airline_code" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="airline_name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="source_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="created_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="updated_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="airline_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="airline_code" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="airline_name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="source_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="created_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="updated_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -5861,7 +6033,7 @@ where [refTable].[airport_code] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="airport_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="airport_code" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="airport_name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="source_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="created_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="updated_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="airport_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="airport_code" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="airport_name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="source_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="created_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="updated_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -5989,7 +6161,7 @@ where [refTable].[airport_code] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[flight]) [refTable]
-where [refTable].[flight_date] = ? and [refTable].[flight_number] = ? and [refTable].[airline_id] = ? and [refTable].[origin_airport_id] = ?</property>
+where [refTable].[source_id] = ? and [refTable].[destination_airport_id] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -6025,7 +6197,7 @@ where [refTable].[flight_date] = ? and [refTable].[flight_number] = ? and [refTa
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DATE]};#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[FLIGHT_NUMBER]};#{Package\Flights Stage to NDS\Lookup airline id.Outputs[Lookup Match Output].Columns[airline_id]};#{Package\Flights Stage to NDS\Lookup origin airport id.Outputs[Lookup Match Output].Columns[origin_airport_id]};</property>
+                  name="ParameterMap">#{Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[source_id]};#{Package\Flights Stage to NDS\Lookup destination airport id.Outputs[Lookup Match Output].Columns[destination_airport_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6049,16 +6221,15 @@ where [refTable].[flight_date] = ? and [refTable].[flight_number] = ? and [refTa
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input].Columns[DATE]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="DATE"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[DATE]">
+                      refId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input].Columns[destination_airport_id]"
+                      cachedDataType="i4"
+                      cachedName="destination_airport_id"
+                      lineageId="Package\Flights Stage to NDS\Lookup destination airport id.Outputs[Lookup Match Output].Columns[destination_airport_id]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">flight_date</property>
+                          name="JoinToReferenceColumn">destination_airport_id</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -6066,47 +6237,15 @@ where [refTable].[flight_date] = ? and [refTable].[flight_number] = ? and [refTa
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input].Columns[FLIGHT_NUMBER]"
+                      refId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input].Columns[source_id]"
                       cachedDataType="i4"
-                      cachedName="FLIGHT_NUMBER"
-                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[FLIGHT_NUMBER]">
+                      cachedName="source_id"
+                      lineageId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1].Columns[source_id]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">flight_number</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input].Columns[airline_id]"
-                      cachedDataType="i4"
-                      cachedName="airline_id"
-                      lineageId="Package\Flights Stage to NDS\Lookup airline id.Outputs[Lookup Match Output].Columns[airline_id]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">airline_id</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input].Columns[origin_airport_id]"
-                      cachedDataType="i4"
-                      cachedName="origin_airport_id"
-                      lineageId="Package\Flights Stage to NDS\Lookup origin airport id.Outputs[Lookup Match Output].Columns[origin_airport_id]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">origin_airport_id</property>
+                          name="JoinToReferenceColumn">source_id</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -6226,7 +6365,7 @@ where [refTable].[airport_code] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="airport_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="airport_code" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="airport_name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="source_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="created_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="updated_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="airport_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="airport_code" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="airport_name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="state" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="latitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_NUMERIC" length="0" precision="12" scale="9" codePage="0"/&gt;&lt;referenceColumn name="source_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="created_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="updated_date" dataType="DT_WSTR" length="27" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -7947,6 +8086,11 @@ where [refTable].[airport_code] = ?</property>
               name="Derived Column Output"
               startId="Package\Flights Stage to NDS\updated_date.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Flights Stage to NDS.Paths[Derived Column Output5]"
+              endId="Package\Flights Stage to NDS\Lookup airline id.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Flights Stage to NDS\Derived Column.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Flights Stage to NDS.Paths[Lookup Match Output]"
               endId="Package\Flights Stage to NDS\Lookup flight.Inputs[Lookup Input]"
               name="Lookup Match Output"
@@ -7988,7 +8132,7 @@ where [refTable].[airport_code] = ?</property>
               startId="Package\Flights Stage to NDS\Load flight 3 stage.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Flights Stage to NDS.Paths[Union All Output 1]"
-              endId="Package\Flights Stage to NDS\Lookup airline id.Inputs[Lookup Input]"
+              endId="Package\Flights Stage to NDS\Derived Column.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\Flights Stage to NDS\Union All.Outputs[Union All Output 1]" />
           </paths>
@@ -8027,13 +8171,13 @@ where [refTable].[airport_code] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="180,41.6"
-          Id="Package\Airports Stage to NDS"
-          TopLeft="161.66665783359,90.9999993671974" />
-        <NodeLayout
           Size="178.4,41.6"
           Id="Package\Airlines Stage to NDS"
           TopLeft="516.666638437246,103.133332616157" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Airports Stage to NDS"
+          TopLeft="161.66665783359,90.9999993671974" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\Flights Stage to NDS"
@@ -8110,214 +8254,6 @@ where [refTable].[airport_code] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Airports Stage to NDS">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Airports Stage to NDS\Load Airports stage"
-          TopLeft="371.666646359696,106.599999258717" />
-        <NodeLayout
-          Size="180.8,41.6"
-          Id="Package\Airports Stage to NDS\Add source_id column"
-          TopLeft="372.499979647498,204.533331911034" />
-        <EdgeLayout
-          Id="Package\Airports Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="459.283313003597,148.199999258717">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56.3333326523172"
-              Start="0,0"
-              End="0,48.8333326523172">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.8333326523172" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="303.2,41.6"
-          Id="Package\Airports Stage to NDS\look up the airpoirt IATA_CODE in Airports stage"
-          TopLeft="317.499982652565,318.933331115511" />
-        <EdgeLayout
-          Id="Package\Airports Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="465.999981150032,246.133331911034">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72.7999992044766"
-              Start="0,0"
-              End="0,65.2999992044766">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65.2999992044766" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Airports Stage to NDS\created_date, updated_date"
-          TopLeft="239.166653599177,446.333330229587" />
-        <EdgeLayout
-          Id="Package\Airports Stage to NDS.Paths[Lookup No Match Output]"
-          TopLeft="419.899982652565,360.533331115511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-76.7333290533885,85.7999991140763"
-              Start="0,0"
-              End="-76.7333290533885,78.2999991140763">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5902358633127" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5902358633127"
-                    Point2="0,34.5902358633127"
-                    Point3="-4,34.5902358633127" />
-                  <mssgle:LineSegment
-                    End="-72.7333290533885,34.5902358633127" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-72.7333290533885,34.5902358633127"
-                    Point2="-76.7333290533885,34.5902358633127"
-                    Point3="-76.7333290533885,38.5902358633127" />
-                  <mssgle:LineSegment
-                    End="-76.7333290533885,78.2999991140763" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-94.1730512454442,39.5902358633127,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Airports Stage to NDS\OLE DB Command"
-          TopLeft="256.666652643019,551.199996167024" />
-        <EdgeLayout
-          Id="Package\Airports Stage to NDS.Paths[Derived Column Output1]"
-          TopLeft="341.716653121098,487.933330229587">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.2666659374368"
-              Start="0,0"
-              End="0,55.7666659374368">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.7666659374368" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Airports Stage to NDS\OLE DB Command 1"
-          TopLeft="559.166636115148,554.666663532787" />
-        <NodeLayout
-          Size="141.6,41.6"
-          Id="Package\Airports Stage to NDS\updated_date"
-          TopLeft="568.33330228097,461.79999752303" />
-        <EdgeLayout
-          Id="Package\Airports Stage to NDS.Paths[Lookup Match Output]"
-          TopLeft="518.299982652565,360.533331115511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120.833319628405,101.266666407519"
-              Start="0,0"
-              End="120.833319628405,93.766666407519">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.825616693425" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.825616693425"
-                    Point2="0,40.825616693425"
-                    Point3="4,40.825616693425" />
-                  <mssgle:LineSegment
-                    End="116.833319628405,40.825616693425" />
-                  <mssgle:CubicBezierSegment
-                    Point1="116.833319628405,40.825616693425"
-                    Point2="120.833319628405,40.825616693425"
-                    Point3="120.833319628405,44.825616693425" />
-                  <mssgle:LineSegment
-                    End="120.833319628405,93.766666407519" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="12.2252730954525,45.825616693425,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Airports Stage to NDS.Paths[Derived Column Output2]"
-          TopLeft="639.13330228097,503.39999752303">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.03333383417805,51.266666009757"
-              Start="0,0"
-              End="8.03333383417805,43.766666009757">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.6333330048785" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.6333330048785"
-                    Point2="0,25.6333330048785"
-                    Point3="4,25.6333330048785" />
-                  <mssgle:LineSegment
-                    End="4.03333383417805,25.6333330048785" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.03333383417805,25.6333330048785"
-                    Point2="8.03333383417805,25.6333330048785"
-                    Point3="8.03333383417805,29.6333330048785" />
-                  <mssgle:LineSegment
-                    End="8.03333383417805,43.766666009757" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
     design-time-name="Package\Airlines Stage to NDS">
     <LayoutInfo>
       <GraphLayout
@@ -8327,13 +8263,25 @@ where [refTable].[airport_code] = ?</property>
           Id="Package\Airlines Stage to NDS\Load airlines stage"
           TopLeft="199.499992656211,57.0000000447035" />
         <NodeLayout
+          Size="208,41.6"
+          Id="Package\Airlines Stage to NDS\created_date, updated_date"
+          TopLeft="60,399.73333097087" />
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Airlines Stage to NDS\update airline"
+          TopLeft="396.999994084239,509.999992400408" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Airlines Stage to NDS\insert new airline"
+          TopLeft="82.9999987632036,514.999992325902" />
+        <NodeLayout
           Size="180.8,41.6"
           Id="Package\Airlines Stage to NDS\Add source_id column"
           TopLeft="193.333326048321,157.933332652317" />
         <NodeLayout
-          Size="208,41.6"
-          Id="Package\Airlines Stage to NDS\created_date, updated_date"
-          TopLeft="60,399.73333097087" />
+          Size="291.2,41.6"
+          Id="Package\Airlines Stage to NDS\look up the airline IATA_CODE in airline stage"
+          TopLeft="137.99999794364,269.999995976686" />
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\Airlines Stage to NDS\updated_date"
@@ -8352,32 +8300,6 @@ where [refTable].[airport_code] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,51.8333326076137" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="291.2,41.6"
-          Id="Package\Airlines Stage to NDS\look up the airline IATA_CODE in airline stage"
-          TopLeft="137.99999794364,269.999995976686" />
-        <EdgeLayout
-          Id="Package\Airlines Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="283.66666199598,199.533332652317">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70.4666633243692"
-              Start="0,0"
-              End="0,62.9666633243692">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.9666633243692" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8458,36 +8380,6 @@ where [refTable].[airport_code] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Airlines Stage to NDS\insert new airline"
-          TopLeft="82.9999987632036,514.999992325902" />
-        <EdgeLayout
-          Id="Package\Airlines Stage to NDS.Paths[Derived Column Output1]"
-          TopLeft="162.699999381602,441.33333097087">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,73.6666613550321"
-              Start="0,0"
-              End="0,66.1666613550321">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.1666613550321" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Airlines Stage to NDS\update airline"
-          TopLeft="396.999994084239,509.999992400408" />
         <EdgeLayout
           Id="Package\Airlines Stage to NDS.Paths[Derived Column Output2]"
           TopLeft="467.683321323412,438.799998532534">
@@ -8510,134 +8402,500 @@ where [refTable].[airport_code] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airlines Stage to NDS.Paths[Derived Column Output1]"
+          TopLeft="162.699999381602,441.33333097087">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.6666613550321"
+              Start="0,0"
+              End="0,66.1666613550321">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.1666613550321" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airlines Stage to NDS.Paths[Derived Column Output]"
+          TopLeft="283.66666199598,199.533332652317">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.4666633243692"
+              Start="0,0"
+              End="0,62.9666633243692">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.9666633243692" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Airlines Stage to NDS\Load airlines stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Airlines Stage to NDS\look up the airline IATA_CODE in airline stage">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[airline]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Airports Stage to NDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Airports Stage to NDS\OLE DB Command"
+          TopLeft="256.666652643019,551.199996167024" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Airports Stage to NDS\updated_date"
+          TopLeft="568.33330228097,461.79999752303" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Airports Stage to NDS\created_date, updated_date"
+          TopLeft="239.166653599177,446.333330229587" />
+        <NodeLayout
+          Size="303.2,41.6"
+          Id="Package\Airports Stage to NDS\look up the airpoirt IATA_CODE in Airports stage"
+          TopLeft="317.499982652565,318.933331115511" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Airports Stage to NDS\Load Airports stage"
+          TopLeft="371.666646359696,106.599999258717" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Airports Stage to NDS\OLE DB Command 1"
+          TopLeft="559.166636115148,554.666663532787" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Airports Stage to NDS\Add source_id column"
+          TopLeft="372.499979647498,204.533331911034" />
+        <EdgeLayout
+          Id="Package\Airports Stage to NDS.Paths[Derived Column Output2]"
+          TopLeft="639.13330228097,503.39999752303">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.03333383417805,51.266666009757"
+              Start="0,0"
+              End="8.03333383417805,43.766666009757">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.6333330048785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.6333330048785"
+                    Point2="0,25.6333330048785"
+                    Point3="4,25.6333330048785" />
+                  <mssgle:LineSegment
+                    End="4.03333383417805,25.6333330048785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.03333383417805,25.6333330048785"
+                    Point2="8.03333383417805,25.6333330048785"
+                    Point3="8.03333383417805,29.6333330048785" />
+                  <mssgle:LineSegment
+                    End="8.03333383417805,43.766666009757" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airports Stage to NDS.Paths[Derived Column Output1]"
+          TopLeft="341.716653121098,487.933330229587">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.266665937437"
+              Start="0,0"
+              End="0,55.766665937437">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.766665937437" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airports Stage to NDS.Paths[Derived Column Output]"
+          TopLeft="465.999981150032,246.133331911034">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.7999992044766"
+              Start="0,0"
+              End="0,65.2999992044766">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.2999992044766" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airports Stage to NDS.Paths[OLE DB Source Output]"
+          TopLeft="459.283313003597,148.199999258717">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.3333326523172"
+              Start="0,0"
+              End="0,48.8333326523172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.8333326523172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airports Stage to NDS.Paths[Lookup No Match Output]"
+          TopLeft="419.899982652565,360.533331115511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-76.7333290533885,85.7999991140763"
+              Start="0,0"
+              End="-76.7333290533885,78.2999991140763">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5902358633127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5902358633127"
+                    Point2="0,34.5902358633127"
+                    Point3="-4,34.5902358633127" />
+                  <mssgle:LineSegment
+                    End="-72.7333290533885,34.5902358633127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72.7333290533885,34.5902358633127"
+                    Point2="-76.7333290533885,34.5902358633127"
+                    Point3="-76.7333290533885,38.5902358633127" />
+                  <mssgle:LineSegment
+                    End="-76.7333290533885,78.2999991140763" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-94.1730512454442,39.5902358633127,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Airports Stage to NDS.Paths[Lookup Match Output]"
+          TopLeft="518.299982652565,360.533331115511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.833319628405,101.266666407519"
+              Start="0,0"
+              End="120.833319628405,93.766666407519">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.825616693425" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.825616693425"
+                    Point2="0,40.825616693425"
+                    Point3="4,40.825616693425" />
+                  <mssgle:LineSegment
+                    End="116.833319628405,40.825616693425" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.833319628405,40.825616693425"
+                    Point2="120.833319628405,40.825616693425"
+                    Point3="120.833319628405,44.825616693425" />
+                  <mssgle:LineSegment
+                    End="120.833319628405,93.766666407519" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="12.2252730954525,45.825616693425,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Airports Stage to NDS\look up the airpoirt IATA_CODE in Airports stage">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[airport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Airports Stage to NDS\Load Airports stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Flights Stage to NDS">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Flights Stage to NDS\Lookup airline id"
+          TopLeft="487.481473959891,546.74073340753" />
+        <NodeLayout
           Size="163.2,41.6"
           Id="Package\Flights Stage to NDS\Load flight 1 stage"
           TopLeft="257.9999961555,237.999996453524" />
         <NodeLayout
+          Size="184,41.6"
+          Id="Package\Flights Stage to NDS\Lookup origin airport id"
+          TopLeft="467.85184480673,638.51850986363" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Flights Stage to NDS\created_date, updated_date"
+          TopLeft="258.925922030836,944.392583127559" />
+        <NodeLayout
           Size="163.2,41.6"
           Id="Package\Flights Stage to NDS\Load flight 2 stage"
           TopLeft="467.999993026257,233.599998033047" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Flights Stage to NDS\insert new flight to NDS"
+          TopLeft="621.222213075669,1022.97776833133" />
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Flights Stage to NDS\Load flight 3 stage"
           TopLeft="676.999989911914,232.199999567866" />
         <NodeLayout
           Size="163.2,41.6"
-          Id="Package\Flights Stage to NDS\add source flight 1"
-          TopLeft="263.999996066093,315.999995291233" />
-        <NodeLayout
-          Size="163.2,41.6"
           Id="Package\Flights Stage to NDS\add source flight 3"
           TopLeft="679.999989867211,314.599996826053" />
         <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\Flights Stage to NDS\add source flight 2"
-          TopLeft="470.999992981553,311.199998390675" />
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="342.599996110797,279.599996453524">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.3999988377095"
-              Start="0,0"
-              End="0,28.8999988377095">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.8999988377095" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[OLE DB Source Output1]"
-          TopLeft="551.099993003905,275.199998033047">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.0000003576279"
-              Start="0,0"
-              End="0,28.5000003576279">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5000003576279" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[OLE DB Source Output2]"
-          TopLeft="760.099989889562,273.799999567866">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.7999972581865"
-              Start="0,0"
-              End="0,33.2999972581865">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.2999972581865" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="141.6,41.6"
+          Id="Package\Flights Stage to NDS\updated_date"
+          TopLeft="640.592583341362,944.21480682047" />
         <NodeLayout
           Size="120,41.6"
           Id="Package\Flights Stage to NDS\Union All"
           TopLeft="499.999992549419,404.99999396503" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Flights Stage to NDS\load to NDS"
+          TopLeft="294.222217948348,1027.82221190046" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Flights Stage to NDS\add source flight 2"
+          TopLeft="470.999992981553,311.199998390675" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Flights Stage to NDS\Lookup flight"
+          TopLeft="489.148140932859,817.755546264627" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Flights Stage to NDS\Lookup destination airport id"
+          TopLeft="450.85184506005,736.340732302857" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Flights Stage to NDS\Derived Column"
+          TopLeft="489.16663993978,471.3870353427" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Flights Stage to NDS\add source flight 1"
+          TopLeft="263.999996066093,315.999995291233" />
         <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="345.599996066093,357.599995291233">
+          Id="Package\Flights Stage to NDS.Paths[Lookup Match Output2]"
+          TopLeft="562.266659383311,588.34073340753">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="186.399996483326,47.3999986737966"
+              EndConnector="0,50.1777764561"
               Start="0,0"
-              End="186.399996483326,39.8999986737966">
+              End="0,42.6777764561">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.9130426133456" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.9130426133456"
-                    Point2="0,30.9130426133456"
-                    Point3="4,30.9130426133456" />
+                    End="0,42.6777764561" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,15.53420072805,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[Lookup Match Output1]"
+          TopLeft="579.548140932859,859.355546264627">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.844442408504,84.8592605558434"
+              Start="0,0"
+              End="131.844442408504,77.3592605558434">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="182.399996483326,30.9130426133456" />
+                    End="0,30.5289405020328" />
                   <mssgle:CubicBezierSegment
-                    Point1="182.399996483326,30.9130426133456"
-                    Point2="186.399996483326,30.9130426133456"
-                    Point3="186.399996483326,34.9130426133456" />
+                    Point1="0,30.5289405020328"
+                    Point2="0,34.5289405020328"
+                    Point3="4,34.5289405020328" />
                   <mssgle:LineSegment
-                    End="186.399996483326,39.8999986737966" />
+                    End="127.844442408504,34.5289405020328" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127.844442408504,34.5289405020328"
+                    Point2="131.844442408504,34.5289405020328"
+                    Point3="131.844442408504,38.5289405020328" />
+                  <mssgle:LineSegment
+                    End="131.844442408504,77.3592605558434" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="17.730834485502,39.5289405020328,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[Lookup Match Output]"
+          TopLeft="556.599992996454,777.940732302857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.8148139617693"
+              Start="0,0"
+              End="0,32.3148139617693">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3148139617693" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.3527194808847,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[Derived Column Output4]"
+          TopLeft="712.907398208516,985.81480682047">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.1629615108549"
+              Start="0,0"
+              End="0,29.6629615108549">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6629615108549" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8647,19 +8905,19 @@ where [refTable].[airport_code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Derived Column Output1]"
-          TopLeft="556.299992765486,352.799998390675">
+          Id="Package\Flights Stage to NDS.Paths[Derived Column Output3]"
+          TopLeft="362.174069989592,985.992583127559">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.1999955743551"
+              EndConnector="0,41.8296287729054"
               Start="0,0"
-              End="0,44.6999955743551">
+              End="0,34.3296287729054">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.6999955743551" />
+                    End="0,34.3296287729054" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8702,24 +8960,76 @@ where [refTable].[airport_code] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Flights Stage to NDS\Lookup airline id"
-          TopLeft="480.999992832542,490.99999268353" />
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[Derived Column Output1]"
+          TopLeft="556.299992765486,352.799998390675">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.1999955743551"
+              Start="0,0"
+              End="0,44.6999955743551">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.6999955743551" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[Derived Column Output]"
+          TopLeft="345.599996066093,357.599995291233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186.399996483326,47.3999986737966"
+              Start="0,0"
+              End="186.399996483326,39.8999986737966">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.9130426133456" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.9130426133456"
+                    Point2="0,30.9130426133456"
+                    Point3="4,30.9130426133456" />
+                  <mssgle:LineSegment
+                    End="182.399996483326,30.9130426133456" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182.399996483326,30.9130426133456"
+                    Point2="186.399996483326,30.9130426133456"
+                    Point3="186.399996483326,34.9130426133456" />
+                  <mssgle:LineSegment
+                    End="186.399996483326,39.8999986737966" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Flights Stage to NDS.Paths[Union All Output 1]"
-          TopLeft="559.09999269098,446.59999396503">
+          TopLeft="562.7833162446,446.59999396503">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.3999987185002"
+              EndConnector="0,24.7870413776699"
               Start="0,0"
-              End="0,36.8999987185002">
+              End="0,17.2870413776699">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.8999987185002" />
+                    End="0,17.2870413776699" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8728,323 +9038,157 @@ where [refTable].[airport_code] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package\Flights Stage to NDS\Lookup destination airport id"
-          TopLeft="448.999993309379,654.599991759658" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Flights Stage to NDS\Lookup flight"
-          TopLeft="490.99999268353,731.199990940094" />
         <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Lookup Match Output]"
-          TopLeft="556.599992996454,696.199991759658">
+          Id="Package\Flights Stage to NDS.Paths[OLE DB Source Output2]"
+          TopLeft="760.099989889562,273.799999567866">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.999999180436"
+              EndConnector="0,40.7999972581865"
               Start="0,0"
-              End="0,27.499999180436">
+              End="0,33.2999972581865">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.499999180436" />
+                    End="0,33.2999972581865" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.94531209021801,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Flights Stage to NDS\created_date, updated_date"
-          TopLeft="257.9999961555,832.799990940094" />
-        <NodeLayout
-          Size="141.6,41.6"
-          Id="Package\Flights Stage to NDS\updated_date"
-          TopLeft="647.999990344047,838.399992370605" />
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[OLE DB Source Output1]"
+          TopLeft="551.099993003905,275.199998033047">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.0000003576279"
+              Start="0,0"
+              End="0,28.5000003576279">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5000003576279" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[OLE DB Source Output]"
+          TopLeft="342.599996110797,279.599996453524">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.3999988377095"
+              Start="0,0"
+              End="0,28.8999988377095">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8999988377095" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Flights Stage to NDS.Paths[Lookup No Match Output]"
-          TopLeft="559.79999268353,772.799990940094">
+          TopLeft="536.348140932859,859.355546264627">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-197.79999652803,60"
+              EndConnector="-173.422218902023,85.0370368629324"
               Start="0,0"
-              End="-197.79999652803,52.5">
+              End="-173.422218902023,77.5370368629324">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,30.6012770683656" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
+                    Point1="0,30.6012770683656"
+                    Point2="0,34.6012770683656"
+                    Point3="-4,34.6012770683656" />
                   <mssgle:LineSegment
-                    End="-193.79999652803,30" />
+                    End="-169.422218902023,34.6012770683656" />
                   <mssgle:CubicBezierSegment
-                    Point1="-193.79999652803,30"
-                    Point2="-197.79999652803,30"
-                    Point3="-197.79999652803,34" />
+                    Point1="-169.422218902023,34.6012770683656"
+                    Point2="-173.422218902023,34.6012770683656"
+                    Point3="-173.422218902023,38.6012770683656" />
                   <mssgle:LineSegment
-                    End="-197.79999652803,52.5" />
+                    End="-173.422218902023,77.5370368629324" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-154.706384982765,35,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Lookup Match Output1]"
-          TopLeft="581.39999268353,772.799990940094">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="137.399997660517,65.6000014305115"
-              Start="0,0"
-              End="137.399997660517,58.1000014305115">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.6924143751736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.6924143751736"
-                    Point2="0,26.6924143751736"
-                    Point3="4,26.6924143751736" />
-                  <mssgle:LineSegment
-                    End="133.399997660517,26.6924143751736" />
-                  <mssgle:CubicBezierSegment
-                    Point1="133.399997660517,26.6924143751736"
-                    Point2="137.399997660517,26.6924143751736"
-                    Point3="137.399997660517,30.6924143751736" />
-                  <mssgle:LineSegment
-                    End="137.399997660517,58.1000014305115" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="20.5086121115086,31.6924143751736,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Flights Stage to NDS\load to NDS"
-          TopLeft="296.999995574355,906.599990150333" />
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Derived Column Output3]"
-          TopLeft="363.099995864928,874.399990940094">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.1999992102387"
-              Start="0,0"
-              End="0,24.6999992102387">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.6999992102387" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Flights Stage to NDS\insert new flight to NDS"
-          TopLeft="623.999990701676,916.199990925193" />
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Derived Column Output4]"
-          TopLeft="717.999990522861,879.999992370605">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.1999985545873"
-              Start="0,0"
-              End="0,28.6999985545873">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.6999985545873" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\Flights Stage to NDS\Lookup origin airport id"
-          TopLeft="465.999993056059,576.99999140203" />
-        <EdgeLayout
-          Id="Package\Flights Stage to NDS.Paths[Lookup Match Output2]"
-          TopLeft="558.0999929443,532.59999268353">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.3999987185001"
-              Start="0,0"
-              End="0,36.8999987185001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.8999987185001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,12.6453118592501,96.3827734375,11.609375"
+              BoundingBox="-142.517496169762,39.6012770683656,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Flights Stage to NDS.Paths[Lookup Match Output3]"
-          TopLeft="555.699993182719,618.59999140203">
+          TopLeft="557.55184493339,680.11850986363">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.0000003576276"
+              EndConnector="0,56.2222224392275"
               Start="0,0"
-              End="0,28.5000003576276">
+              End="0,48.7222224392275">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5000003576276" />
+                    End="0,48.7222224392275" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.44531267881382,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,18.5564237196138,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flights Stage to NDS.Paths[Derived Column Output5]"
+          TopLeft="565.124056949836,512.9870353427">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.75369806483"
+              Start="0,0"
+              End="0,26.25369806483">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.25369806483" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Airports Stage to NDS\Load Airports stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Airports Stage to NDS\look up the airpoirt IATA_CODE in Airports stage">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[airport]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Airlines Stage to NDS\Load airlines stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Airlines Stage to NDS\look up the airline IATA_CODE in airline stage">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[airline]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Flights Stage to NDS\Load flight 1 stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Flights Stage to NDS\Load flight 2 stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Flights Stage to NDS\Load flight 3 stage">
     <Properties>
@@ -9064,7 +9208,7 @@ where [refTable].[airport_code] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9074,53 +9218,7 @@ where [refTable].[airport_code] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Flights Stage to NDS\Lookup destination airport id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[airport]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Flights Stage to NDS\Lookup flight">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[flight]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9141,12 +9239,97 @@ where [refTable].[airport_code] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Flights Stage to NDS\Lookup destination airport id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[airport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flights Stage to NDS\Load flight 2 stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flights Stage to NDS\Lookup flight">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[flight]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flights Stage to NDS\Load flight 1 stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Flights Stage to NDS\Lookup origin airport id">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[airport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
