@@ -177,7 +177,6 @@ WHERE LSET < '2020-01-01';
 UPDATE dataflow
 SET LSET = '2000-1-1'
 
-
 SELECT 
     f.flow_name, 
     src.table_name AS [Source], 

@@ -180,4 +180,4 @@ SET IDENTITY_INSERT Dim_CancellationReason OFF;
 SELECT * FROM Dim_Date
 SELECT * FROM Dim_CancellationReason
 SELECT * FROM Dim_Airline
-SELECT * FROM Fact_Flight
+SELECT COUNT(*) FROM Fact_Flight
