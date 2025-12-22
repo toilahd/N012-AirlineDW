@@ -17,6 +17,26 @@ SELECT
   NON EMPTY [Dim Date].[Date Hierarchy].[Month].Members ON ROWS
 FROM [dds_airlines];
 
+-- Tổng chuyến bay theo tháng, quý, năm
+WITH
+MEMBER [Measures].[Year] AS
+  [Dim Date].[Date Hierarchy].CurrentMember.Parent.Parent.Name
+MEMBER [Measures].[Quarter] AS
+  [Dim Date].[Date Hierarchy].CurrentMember.Parent.Name
+MEMBER [Measures].[Month] AS
+  [Dim Date].[Date Hierarchy].CurrentMember.Name
+SELECT
+  { [Measures].[Year]
+  , [Measures].[Quarter]
+  , [Measures].[Month]
+  , [Measures].[v Fact Flight Count]
+  } ON COLUMNS,
+  NONEMPTY(
+    [Dim Date].[Date Hierarchy].[Month].Members,
+    [Measures].[v Fact Flight Count]
+  ) ON ROWS
+FROM [dds_airlines];
+
 -- 2) Top 5 sân bay bận nhất
 WITH
 MEMBER [Measures].[Total Traffic] AS
@@ -85,3 +105,4 @@ SELECT
   {[Measures].[Avg Arr Delay (Eligible)]} ON COLUMNS,
   NON EMPTY [Dest Airport SK].[Location Hierarchy].[Airport SK].Members ON ROWS
 FROM [dds_airlines];
+
