@@ -1,0 +1,87 @@
+-- 1. Tổng số chuyến bay theo năm / quý / tháng
+-- Year
+SELECT
+  {[Measures].[v Fact Flight Count]} ON COLUMNS,
+  NON EMPTY [Dim Date].[Date Hierarchy].[Year].Members ON ROWS
+FROM [dds_airlines];
+
+-- Quarter
+SELECT
+  {[Measures].[v Fact Flight Count]} ON COLUMNS,
+  NON EMPTY [Dim Date].[Date Hierarchy].[Quarter].Members ON ROWS
+FROM [dds_airlines];
+
+-- Month
+SELECT
+  {[Measures].[v Fact Flight Count]} ON COLUMNS,
+  NON EMPTY [Dim Date].[Date Hierarchy].[Month].Members ON ROWS
+FROM [dds_airlines];
+
+-- 2) Top 5 sân bay bận nhất
+WITH
+MEMBER [Measures].[Total Traffic] AS
+    ([Measures].[v Fact Flight Count])
+  + ( [Measures].[v Fact Flight Count]
+    , LinkMember(
+        [Origin Airport SK].[Location Hierarchy].CurrentMember,
+        [Dest Airport SK].[Location Hierarchy]
+      )
+    )
+SELECT
+  {[Measures].[Total Traffic]} ON COLUMNS,
+  NON EMPTY
+  TOPCOUNT(
+    [Origin Airport SK].[Location Hierarchy].[Airport SK].Members,
+    5,
+    [Measures].[Total Traffic]
+  ) ON ROWS
+FROM [dds_airlines];
+
+-- 3. OTP ±5 theo sân bay
+WITH
+MEMBER [Measures].[OTP5] AS
+  IIF([Measures].[Eligible Flag]=0, NULL,
+      [Measures].[On Time5 Flag] / [Measures].[Eligible Flag])
+SELECT
+  {[Measures].[OTP5]} ON COLUMNS,
+  NON EMPTY [Origin Airport SK].[Location Hierarchy].[Airport SK].Members ON ROWS
+FROM [dds_airlines];
+
+-- 4. Tỉ lệ hủy chuyến theo nguyên nhân
+WITH
+MEMBER [Measures].[Cancel Rate] AS
+  IIF([Measures].[v Fact Flight Count]=0, NULL,
+      [Measures].[Cancelled Flight Count] / [Measures].[v Fact Flight Count])
+
+SELECT
+  {[Measures].[Cancel Rate], [Measures].[Cancelled Flight Count]} ON COLUMNS,
+  ORDER(
+    FILTER(
+      [Dim Cancellation Reason].[Reason Description].Members,
+      [Measures].[Cancelled Flight Count] > 0
+    ),
+    [Measures].[Cancel Rate],
+    BDESC
+  ) ON ROWS
+FROM [dds_airlines];
+
+-- 5. Trung bình delay theo sân bay đi/đến
+-- Origin
+WITH
+MEMBER [Measures].[Avg Arr Delay (Eligible)] AS
+  IIF([Measures].[Eligible Flag]=0, NULL,
+      [Measures].[Arr Delay Minutes] / [Measures].[Eligible Flag])
+SELECT
+  {[Measures].[Avg Arr Delay (Eligible)]} ON COLUMNS,
+  NON EMPTY [Origin Airport SK].[Location Hierarchy].[Airport SK].Members ON ROWS
+FROM [dds_airlines];
+
+-- Dest
+WITH
+MEMBER [Measures].[Avg Arr Delay (Eligible)] AS
+  IIF([Measures].[Eligible Flag]=0, NULL,
+      [Measures].[Arr Delay Minutes] / [Measures].[Eligible Flag])
+SELECT
+  {[Measures].[Avg Arr Delay (Eligible)]} ON COLUMNS,
+  NON EMPTY [Dest Airport SK].[Location Hierarchy].[Airport SK].Members ON ROWS
+FROM [dds_airlines];
