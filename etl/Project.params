@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
   <SSIS:Parameter
     SSIS:Name="metadata_connectionstring">
@@ -16,7 +16,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=ADMIN-PC;Initial Catalog=metadata_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-etl-{E02DB414-EDCB-4E89-96BE-9B08363B5D77}ADMIN-PC.metadata_airlines;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=LAPTOP-JISSCJN5;Initial Catalog=metadata_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -37,7 +37,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=ADMIN-PC;Initial Catalog=source_db;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-etl-{0FFC708C-727E-405F-BDF9-861870004EA1}ADMIN-PC.source_db;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=LAPTOP-JISSCJN5;Initial Catalog=source_db;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -58,7 +58,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=ADMIN-PC;Initial Catalog=stage_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-etl-{0B7F5142-8B7D-4089-8B5C-7A5B7599407D}ADMIN-PC.stage_airlines;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=LAPTOP-JISSCJN5;Initial Catalog=stage_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -79,7 +79,28 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=ADMIN-PC;Initial Catalog=nds_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-etl-{0B7F5142-8B7D-4089-8B5C-7A5B7599407D}ADMIN-PC.nds_airlines;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=LAPTOP-JISSCJN5;Initial Catalog=nds_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="dq_connectionstring">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{cf101ab2-527b-4a78-8f74-419505c37dbf}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">Data Source=LAPTOP-JISSCJN5;Initial Catalog=dq_airlines;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{F5EE4E8A-C268-4EDB-A4BC-474FD48BC80C}LAPTOP-JISSCJN5.dq_airlines;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
