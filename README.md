@@ -118,6 +118,70 @@ The Data Warehouse supports the following core analytical queries:
 
 All analytical queries are implemented using SQL and OLAP techniques.
 
+Follow the steps below to run everything end-to-end.
+
+
+### 1) Requirements
+
+#### Software
+- Windows
+- **SQL Server Database Engine**
+- **SQL Server Analysis Services (SSAS) — Multidimensional mode**
+- **Visual Studio + SSDT / Analysis Services Projects extension**
+- **SQL Server Management Studio (SSMS)**
+
+
+### 2) Database
+
+After you run the ETL project here **https://github.com/toilahd/N012-AirlineDW.git** you will have data in dds_airlines database.
+
+
+### 3) Create/Update SQL Views
+
+Run the provided view script on the restored database:
+
+1. In **SSMS** → New Query
+2. Execute the provided `create_view` script
+
+
+### 4) Open the SSAS project
+
+1. Open Visual Studio
+2. Open the `.sln` file from this repository
+
+
+### 5) Configure the SSAS Data Source (important)
+
+1. In **Solution Explorer** → **Data Sources**
+2. Open `dds_airlines.ds`
+3. Edit the connection:
+   - SQL Server instance name (your machine)
+   - Authentication (Windows Auth recommended)
+   - Database: `dds_airlines`
+4. Click **Test Connection** → **OK** → Save
+
+
+### 6) Deploy to SSAS and Process the cube (build the OLAP database)
+
+1. Right-click the project → **Properties**
+2. Go to **Deployment**
+3. Set:
+   - **Server**: your SSAS instance name
+   - **Database**: `OLAP` (or any name you want)
+4. Click **OK**
+5. Right-click project → **Build** 
+6. Right-click project → **Deploy**
+7. Right-click project → **Process**
+8. Choose **Process Full** → Run
+
+
+### 7) Run MDX queries (validation)
+
+1. In **SSMS** → connect to **Analysis Services**
+2. New Query → select cube database
+3. Open `scripts/OLAP.mdx` from this repo (or paste queries)
+4. Execute queries
+
 ---
 
 ## Dashboards & Visualization
@@ -198,4 +262,5 @@ N012-AirlineDW/
 - **Languages**: T-SQL (Stored Procedures, Scripts)
 - **Visualization**: Power BI Desktop
 - **Data Mining**: Python
+
 
